@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage</title>
+    
+    <script src="https://kit.fontawesome.com/79cd4a257f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Raj Rajput</div>
+        <ul class="navlist">
+            <li id="first"><i class="fas fa-circle" style="color: blueviolet;"></i></li>
+            <li id="second"><i class="fas fa-circle" style="color: red;"></i></li>
+            <li id="third"><i class="fas fa-circle" style="color:blue;"></i></li>
+            <li id="forth"><i class="fas fa-circle"  style="color: turquoise;"></i></li>
+        </ul>
+    </nav>
+    <div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="https://media.istockphoto.com/photos/haker-looking-for-backdoors-and-exploiting-vulnerability-to-steal-picture-id1095218120" />  
+            <div class="content">Slide1 heading</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="https://st.depositphotos.com/1037238/4364/v/950/depositphotos_43641985-stock-illustration-computer-programmer-working-on-his.jpg" />  
+            <div class="content">Slide2 heading</div>  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="https://png.pngtree.com/png-clipart/20200225/original/pngtree-programmer-illustration-vector-on-white-background-png-image_5295829.jpg" />  
+            <div class="content">Slide3 heading</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="https://thumbs.dreamstime.com/b/haking-crypto-world-haker-guy-hoodie-currency-concept-dark-background-d-rendering-156544339.jpg" />  
+            <div class="content">Slide4 heading</div>  
+        </div>  
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+    </div>  
+        <div class="button-container">
+            <i onclick="previos()" class="fas fa-chevron-left"></i>
+            <i onclick="next()" class="fas fa-chevron-right"></i>
+        </div>
+    </section>
+    <section class="image-para">
+        <div class="mydiv">
+            <img src="/raj.jpeg" alt="">
+            <p>Good morning/afternoon,
+
+                Let me start by thanking you for this wonderful opportunity.
+                It's My pleasure to introduce myself.
+                Hi, I am raj rajput 20 years old.
+                I am from madya Pradesh and have completed my Bachelor's Degree in 2021 from mcu University bhopal.
+        </div>
+        <div class="mydiv" style="margin-right:28px; padding:20 ;">
+            <img src="/raj2.jpeg" alt="">
+            <p>welcome to my webpage </p>
+        </div>
+    </section>
+    <section class="image-video">
+        <div class="text">
+            <h1>web developer</h1>
+            <p>I’m raj , Im from a gwalior,  I’m working as a fresher a web developer in Company. have developed many website and apart from the I have been part of web design project, office work and as freelancer. .
+
+               
+                
+                Explore the you skills different way.
+                
+                1. HTML5, CSS3, Bootstrap, Javascript, jquery and React JS.
+                
+                after that I gonna developing jquery plugin and react js projects so as soon as possible I ll update all projects in my GitHub account.
+                
+                If you got any awards please explain that also.
+                
+                That’s all about and Thank you so much.
+                
+                Note: Sorry my english language is not good. If you ll get an error and any modify the words please let me know because It helps to developing my communication skills and english language.</p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eK0IIyBlYew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
+    <section class="footer">
+    <footer>
+        <div class="social-icons">
+           <a href="https://github.com/"> <i class="fab fa-github"></i></a>
+                       <a href="https://www.instagram.com/therajrajput99/"> <i class="fab fa-instagram"></i></a>
+            <i class="fab fa-linkedin-in"></i>
+             <a href="https://wa.me/918827335976"><i class="fab fa-whatsapp-square"></i></a>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28632.37249851143!2d78.17764038890536!3d26.227676573477385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c68ff0a2df73%3A0xebff42167ed98c34!2sGwalior%20Fort!5e0!3m2!1sen!2sin!4v1635330962016!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact">
+            <h2>Buy me a Coffee</h2>
+        </div>
+    </footer>
+    <div class="div4"><p>Developed with <span>❤</span> by Raj rajput</p></div>
+</section>
+<script>  
+    var slide_index = 1;  
+    displaySlides(slide_index);  
+
+    function nextSlide(n) {  
+        displaySlides(slide_index += n);  
+    }  
+
+    function currentSlide(n) {  
+        displaySlides(slide_index = n);  
+    }  
+
+    function displaySlides(n) {  
+        var i;  
+        var slides = document.getElementsByClassName("showSlide");  
+        if (n > slides.length) { slide_index = 1 }  
+        if (n < 1) { slide_index = slides.length }  
+        for (i = 0; i < slides.length; i++) {  
+            slides[i].style.display = "none";  
+        }  
+        slides[slide_index - 1].style.display = "block";  
+    }  
+</script>  
+</body>
+</html>
